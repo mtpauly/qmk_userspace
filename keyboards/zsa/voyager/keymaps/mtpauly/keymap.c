@@ -13,14 +13,24 @@
 // CTRL LAYER ALT SHIFT CMD
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
+    // Base layer
     [0] = LAYOUT(
         _______,        KC_1,           KC_2,           KC_3,           KC_4,           KC_5,                           KC_6,           KC_7,           KC_8,           KC_9,           KC_0,           _______,
         _______,        KC_V,           KC_M,           KC_L,           KC_C,           KC_P,                           KC_B,           QK_AREP,        KC_O,           KC_U,           KC_J,           _______,
-        KC_TAB,         LCTL_T(KC_S),   LT(1, KC_T),    LALT_T(KC_R),   LSFT_T(KC_D),   LGUI_T(KC_Y),                   RGUI_T(KC_F),   RSFT_T(KC_N),   RALT_T(KC_A),   LT(1, KC_E),    RCTL_T(KC_I),   KC_QUOTE,
-        CW_TOGG,        KC_W,           KC_K,           KC_X,           KC_G,           KC_Q,                           KC_Z,           KC_H,           KC_COMM,        KC_DOT,         KC_SCLN,        KC_ENTER,
-                                                                        QK_REPEAT_KEY,  KC_ESCAPE,                      KC_BSPC,        KC_SPACE
+        KC_TAB,         LALT_T(KC_S),   LT(1, KC_T),    LSFT_T(KC_R),   LT(2, KC_D),    KC_Y,                           KC_F,           LT(2, KC_N),    RSFT_T(KC_A),   LT(1, KC_E),    RALT_T(KC_I),   KC_QUOTE,
+        CW_TOGG,        LGUI_T(KC_W),   KC_K,           KC_X,           LCTL_T(KC_G),   KC_Q,                           KC_Z,           LCTL_T(KC_H),   KC_COMM,        KC_DOT,         RGUI_T(KC_SCLN),KC_ENTER,
+                                                                        KC_ESCAPE,      QK_REPEAT_KEY,                  KC_SPACE,       KC_BSPC
     ),
+    // Symbol layer
     [1] = LAYOUT(
+        _______,        _______,        _______,        _______,        _______,        _______,                        _______,        _______,        _______,        _______,        _______,        _______,
+        _______,        KC_GRV,         KC_LABK,        KC_RABK,        KC_MINS,        KC_PIPE,                        KC_CIRC,        KC_LCBR,        KC_RCBR,        KC_DLR,         _______,        _______,
+        _______,        KC_EXLM,        KC_ASTR,        KC_SLSH,        KC_EQL,         KC_AMPR,                        KC_HASH,        KC_LPRN,        KC_RPRN,        KC_SCLN,        KC_DQUO,        _______,
+        _______,        KC_TILD,        KC_PLUS,        KC_LBRC,        KC_RBRC,        KC_PERC,                        KC_AT,          KC_COLN,        KC_COMM,        KC_DOT,         KC_QUOT,        _______,
+                                                                        _______,        _______,                        _______,        _______
+    ),
+    // Navigation layer
+    [2] = LAYOUT(
         _______,        _______,        _______,        _______,        _______,        _______,                        _______,        _______,        _______,        _______,        _______,        _______,
         _______,        _______,        _______,        _______,        _______,        _______,                        _______,        _______,        _______,        _______,        _______,        _______,
         _______,        _______,        _______,        _______,        _______,        _______,                        _______,        _______,        _______,        _______,        _______,        _______,
